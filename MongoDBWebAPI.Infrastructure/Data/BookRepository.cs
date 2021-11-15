@@ -21,6 +21,11 @@ namespace MongoDBWebAPI.Infrastructure.Data
             return await _books.Find(b => true).ToListAsync();
         }
 
+        public async Task<List<Book>> Gets(int skip, int limit)
+        {
+            return await _books.Find(b => true).Skip(skip).Limit(limit).ToListAsync();
+        }
+
         public async Task<Book> Get(string id)
         {
             return await _books.Find(b => b.Id.Equals(id)).SingleOrDefaultAsync();

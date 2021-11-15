@@ -1,4 +1,5 @@
-﻿using MongoDBWebAPI.Core.Entities.Database;
+﻿using Microsoft.Extensions.Logging;
+using MongoDBWebAPI.Core.Entities.Database;
 using MongoDBWebAPI.Core.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -8,10 +9,12 @@ namespace MongoDBWebAPI.Infrastructure.Services
     public class BookService : IBookService
     {
         private readonly IBookRepository _bookRepository;
+        private readonly ILogger<BookService> _logger;
 
-        public BookService(IBookRepository bookRepository)
+        public BookService(IBookRepository bookRepository, ILogger<BookService> logger)
         {
             _bookRepository = bookRepository;
+            _logger = logger;
         }
 
         public Book Create(Book book)
@@ -33,6 +36,11 @@ namespace MongoDBWebAPI.Infrastructure.Services
         {
             return await _bookRepository.Gets();
         }
-               
+
+        public async Task<List<Book>> GetBooks(int skip, int limit)
+        {
+            return await _bookRepository.Gets(skip, limit);
+        }
+
     }
 }

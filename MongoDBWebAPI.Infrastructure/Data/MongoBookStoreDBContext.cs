@@ -3,12 +3,12 @@ using MongoDBWebAPI.Core.Interfaces;
 
 namespace MongoDBWebAPI.Infrastructure.Data
 {
-    public class MongoBookDBContext : IMongoBookStoreDBContext
+    public class MongoBookStoreDBContext : IMongoBookStoreDBContext
     {
         private IMongoDatabase _db { get; set; }
         private IMongoClient _mongoClient { get; set; }
 
-        public MongoBookDBContext(IBookstoreDatabaseSettings configuration)
+        public MongoBookStoreDBContext(IBookstoreDatabaseSettings configuration)
         {
             _mongoClient = new MongoClient(configuration.ConnectionString);
             _db = _mongoClient.GetDatabase(configuration.DatabaseName);

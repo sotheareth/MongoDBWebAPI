@@ -25,7 +25,7 @@ namespace MongoDBWebAPI.Controllers
         }
 
         [HttpGet()]
-        public async Task<IActionResult> Test()
+        public IActionResult Test()
         {
             var result = "Hello World!";
 

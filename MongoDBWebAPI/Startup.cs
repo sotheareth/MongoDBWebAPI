@@ -47,7 +47,7 @@ namespace MongoDBWebAPI
             services.Configure<BookstoreDatabaseSettings>(Configuration.GetSection(nameof(BookstoreDatabaseSettings)));
             services.AddSingleton<IBookstoreDatabaseSettings>(sp => sp.GetRequiredService<IOptions<BookstoreDatabaseSettings>>().Value);
             
-            services.AddSingleton<IMongoBookStoreDBContext, MongoBookDBContext>();
+            services.AddSingleton<IMongoBookStoreDBContext, MongoBookStoreDBContext>();
 
             ApplicationServicesExtensions.AddApplicationServices(services);
 
@@ -76,7 +76,6 @@ namespace MongoDBWebAPI
 
             app.UseEndpoints(endpoints =>
             {
-                //endpoints.MapControllers();
                 endpoints.MapDefaultControllerRoute();
 
                 endpoints.MapControllerRoute(

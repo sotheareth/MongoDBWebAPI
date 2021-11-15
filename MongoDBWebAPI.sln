@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDBWebAPI.Core", "Mongo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDBWebAPI.Infrastructure", "MongoDBWebAPI.Infrastructure\MongoDBWebAPI.Infrastructure.csproj", "{56D59DA8-05AA-4325-B2BC-B7B6EFDAEBEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBWebAPI.Test", "MongoDBWebAPI.Test\MongoDBWebAPI.Test.csproj", "{DBAB83A0-4097-489F-82EF-B09B8E39B6FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDBWebAPI.Test", "MongoDBWebAPI.Test\MongoDBWebAPI.Test.csproj", "{DBAB83A0-4097-489F-82EF-B09B8E39B6FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBWebAPI.SeleniumTest", "MongoDBWebAPI.SeleniumTest\MongoDBWebAPI.SeleniumTest.csproj", "{9FEC57A3-FA21-4881-93EC-DE16075D15FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{DBAB83A0-4097-489F-82EF-B09B8E39B6FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBAB83A0-4097-489F-82EF-B09B8E39B6FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBAB83A0-4097-489F-82EF-B09B8E39B6FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FEC57A3-FA21-4881-93EC-DE16075D15FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FEC57A3-FA21-4881-93EC-DE16075D15FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FEC57A3-FA21-4881-93EC-DE16075D15FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FEC57A3-FA21-4881-93EC-DE16075D15FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

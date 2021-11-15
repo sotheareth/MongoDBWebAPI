@@ -9,6 +9,8 @@ namespace MongoDBWebAPI.Core.Interfaces
     {
         Task<List<Book>> Gets();
 
+        Task<List<Book>> Gets(int skip, int limit);
+
         Task<Book> Get(string id);
 
         Book Create(Book book);
