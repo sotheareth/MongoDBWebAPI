@@ -1,0 +1,12 @@
+﻿C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI\Controllers\BookController.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI\Extensions\ApplicationServicesExtensions.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI\Helpers\MappingProfile.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI\Program.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI\Routing\EmailRouteContraint.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI\Startup.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI\obj\Debug\net5.0\MongoDBWebAPI.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI\obj\Debug\net5.0\MongoDBWebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI\appsettings.Development.json
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI\appsettings.json
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI\Properties\launchSettings.json

@@ -1,0 +1,10 @@
+﻿C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI.Core\DTO\Requests\CreateBookRequestDTO.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI.Core\Entities\Database\BaseEntity.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI.Core\Entities\Database\Book.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI.Core\Interfaces\IBookRepository.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI.Core\Interfaces\IBookService.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI.Core\Interfaces\IBookstoreDatabaseSettings.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI.Core\Interfaces\IMongoBookStoreDBContext.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI.Core\Settings\BookstoreDatabaseSettings.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI.Core\Specifications\BaseSpecification.cs
+C:\Users\Administrator\source\repos\MongoDBWebAPI\MongoDBWebAPI.Core\Specifications\ISpecification.cs
