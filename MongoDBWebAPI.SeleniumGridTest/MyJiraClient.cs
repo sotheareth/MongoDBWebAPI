@@ -14,8 +14,8 @@ namespace MongoDBWebAPI.SeleniumGridTest
         public static void AddIssue(ITestFailed testFailed, byte[] bytes)
         {
             var url = "https://palm-tree.atlassian.net/";
-            var username = "sotheareth.ham@gmail.com";
-            var apiKey = "8hc4ECVPMB0BIkFwjGqvBD4D";
+            var username = "your email";
+            var apiKey = "your api key in jira";
             try
             {
                 var messages = testFailed.Messages;
