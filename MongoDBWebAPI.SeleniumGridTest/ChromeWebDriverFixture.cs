@@ -1,33 +1,35 @@
 using System;
-using OpenQA.Selenium.Chrome;
-using WebDriverManager.DriverConfigs.Impl;
+using Microsoft.VisualStudio.TestPlatform.ObjectModel;
+using OpenQA.Selenium;
 
 namespace MongoDBWebAPI.SeleniumGridTest
 {
-    public class WebDriverFixture : IDisposable
+    public class ChromeWebDriverFixture : IDisposable
     {
         private bool disposedValue;
-        public ChromeDriver ChromeDriver { get; private set; }
 
-        public WebDriverFixture()
+        public IWebDriver Driver { get; private set; }
+
+        public ChromeWebDriverFixture()
         {
-            //var driver = new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
-            this.ChromeDriver = new ChromeDriver();
+            var hubUrl = "http://localhost:4446/";
+            Driver = LocalDriverFactory.CreateInstance(BrowserType.Chrome, hubUrl);
         }
 
         public void SetImplicitWait()
         {
-            ChromeDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
+        
         protected virtual void Dispose(bool disposing)
         {
             if (!disposedValue)
             {
                 if (disposing)
                 {
-                    ChromeDriver.Quit();
-                    ChromeDriver.Dispose();
+                    Driver.Quit();
+                    Driver.Dispose();
                 }
 
                 disposedValue = true;
@@ -40,5 +42,6 @@ namespace MongoDBWebAPI.SeleniumGridTest
             Dispose(disposing: true);
             GC.SuppressFinalize(this);
         }
+
     }
 }

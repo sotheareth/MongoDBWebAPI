@@ -8,9 +8,7 @@ namespace MongoDBWebAPI.Helpers
     {
         public MappingProfile()
         {
-
-            CreateMap<CreateBookRequestDTO, Book>();
-
+            this.CreateMap<CreateBookRequestDTO, Book>();
         }
     }
 }

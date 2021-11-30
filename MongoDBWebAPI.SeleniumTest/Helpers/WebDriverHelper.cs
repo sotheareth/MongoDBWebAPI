@@ -3,7 +3,7 @@ using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 using System;
 
-namespace MongoDBWebAPI.SeleniumTest.Helpers
+namespace MongoDBWebAPI.SeleniumGridTest.Helpers
 {
     public static class WebDriverHelper
     {
@@ -14,25 +14,25 @@ namespace MongoDBWebAPI.SeleniumTest.Helpers
             wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
             wait.Message = "Element is not found";
 
-            //    try
-            //    {
-            //        var elementToBeDisplayed = driver.FindElement(by);
-            //        if (elementToBeDisplayed.Displayed)
-            //        {
-            //            return elementToBeDisplayed;
-            //        }
-            //        return null;
-            //    }
-            //    catch (StaleElementReferenceException)
-            //    {
-            //        return null;
-            //    }
-            //    catch (NoSuchElementException)
-            //    {
-            //        return null;
-            //    }
+            try
+            {
+                var elementToBeDisplayed = driver.FindElement(by);
+                if (elementToBeDisplayed.Displayed)
+                {
+                    return elementToBeDisplayed;
+                }
+                return null;
+            }
+            catch (StaleElementReferenceException)
+            {
+                return null;
+            }
+            catch (TimeoutException)
+            {
+                return null;
+            }
 
-            return wait.Until<IWebElement>(ExpectedConditions.ElementExists(by));
+            //return wait.Until<IWebElement>(ExpectedConditions.ElementExists(by));
         }
     }
 }

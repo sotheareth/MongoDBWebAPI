@@ -1,0 +1,47 @@
+﻿version: "3"
+services:
+  selenium-hub:
+    image: selenium/hub:4.1.0-prerelease-20211105
+    container_name: selenium-hub
+    ports:
+      - "4446:4444"
+      
+  chrome:
+    image: selenium/node-chrome:4.1.0-prerelease-20211105
+    deploy:
+      replicas: 1
+    ports:
+      - "32767-32770:5900"
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - JAVA_OPTS=-Dwebdriver.chrome.whitelistedIps=
+    links:
+      - selenium-hub:hub
+   
+  firefox:
+    image: selenium/node-firefox:4.1.0-prerelease-20211105
+    deploy:
+      replicas: 1
+    ports:
+      - "32771:5900"
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - JAVA_OPTS=-Dwebdriver.chrome.whitelistedIps=
+    links:
+      - selenium-hub:hub

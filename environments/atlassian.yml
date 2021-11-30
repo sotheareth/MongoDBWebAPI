@@ -1,0 +1,27 @@
+version: "3"
+services:
+  atlassian:
+    image: atlassian/jira-software
+    ports:
+      - "9091:8080"
+    volumes:
+      - jiraVolume:/var/atlassian/application-data/jira
+    depends_on: 
+      - db
+      
+  db:
+    image: mysql
+    environment:
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: P@ssword!
+      MYSQL_ROOT_PASSWORD: P@ssword!
+      MYSQL_DATABASE: atlassian
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysql_db:/var/lib/mysql
+      
+volumes:
+  jiraVolume:
+  mysql_db:
+  

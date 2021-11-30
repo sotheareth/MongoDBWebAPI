@@ -1,12 +1,12 @@
 ﻿using AutoFixture.Xunit2;
-using MongoDBWebAPI.SeleniumTest.DTO.Requests;
-using MongoDBWebAPI.SeleniumTest.Helpers;
+using MongoDBWebAPI.SeleniumGridTest.DTO.Requests;
+using MongoDBWebAPI.SeleniumGridTest.Helpers;
 using OpenQA.Selenium;
 using System;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace MongoDBWebAPI.SeleniumTest
+namespace MongoDBWebAPI.SeleniumGridTest
 {
     public class SeleniumWithContext : IClassFixture<WebDriverFixture>
     {
@@ -18,16 +18,6 @@ namespace MongoDBWebAPI.SeleniumTest
             this.testOutputHelper = testOutputHelper;
             this.webDriverFixture = webDriverFixture;
         }
-
-        //[Fact]
-        //public void Test1()
-        //{
-        //    Console.WriteLine("First test");
-        //    testOutputHelper.WriteLine("First test");
-
-        //    webDriverFixture.ChromeDriver.Navigate().GoToUrl("www.google.com");
-
-        //}
 
         [Theory]
         [InlineData("test@yahoo.com", "123456")]
